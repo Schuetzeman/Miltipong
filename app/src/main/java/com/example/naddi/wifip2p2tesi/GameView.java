@@ -19,7 +19,8 @@ import com.example.naddi.wifip2p2tesi.MainActivity;
 public class GameView extends View  {
 
     int amountPlayers;
-    int zwischenspeicher;
+    int scoreLeft = 0;
+    int scoreRight = 0;
     float zwischenfloat;
     public static Circle circle;
     Screen thisScreen;
@@ -45,8 +46,10 @@ public class GameView extends View  {
         Log.i(TAG, "Das Objekt Circle ist Erschinen");
         circle = new Circle();
 
+        circle.standardradius = 10;
 
-        circle.radius = 10 * thisScreen.density;
+
+        circle.radius = circle.standardradius * thisScreen.density;
 
 
 
@@ -72,33 +75,25 @@ public class GameView extends View  {
             circle.standardyspeed = 3;
             //circle.radius = 10 * thisScreen.density;
 
-            if(thisScreen.HandyPosition == 'l') zwischenspeicher = 1;
-            if(thisScreen.HandyPosition == 'r') zwischenspeicher = amountPlayers;
-            if(thisScreen.HandyPosition != 'l' && thisScreen.HandyPosition != 'r') zwischenspeicher = Character.getNumericValue(thisScreen.HandyPosition);
 
-            screen[zwischenspeicher - 1].width = thisScreen.width;
-            screen[zwischenspeicher - 1].height = thisScreen.height;
-            screen[zwischenspeicher - 1].density = thisScreen.density;
-            screen[zwischenspeicher - 1].HandyPosition = thisScreen.HandyPosition;
-            screen[zwischenspeicher - 1].HandyTask = 'h';
+            screen[thisScreen.HandyPosition - 1].width = thisScreen.width;
+            screen[thisScreen.HandyPosition - 1].height = thisScreen.height;
+            screen[thisScreen.HandyPosition - 1].density = thisScreen.density;
+            screen[thisScreen.HandyPosition - 1].HandyPosition = thisScreen.HandyPosition;
+            screen[thisScreen.HandyPosition - 1].HandyTask = 'h';
 
             saveScreen = new Screen();
 
             for(int i = 0; i < amountPlayers - 1; i++){
                 saveScreen.getHandyDimensions();
                 saveScreen.getHandyPosition();
-                saveScreen.HandyPosition = 'r';
+                saveScreen.HandyPosition = amountPlayers;
 
-                if(saveScreen.HandyPosition == 'l') zwischenspeicher = 1;
-                if(saveScreen.HandyPosition == 'r') zwischenspeicher = amountPlayers;
-                if(saveScreen.HandyPosition != 'l' && saveScreen.HandyPosition != 'r') zwischenspeicher = Character.getNumericValue(saveScreen.HandyPosition);
-
-
-                screen[zwischenspeicher - 1].width = saveScreen.width;
-                screen[zwischenspeicher - 1].height = saveScreen.height;
-                screen[zwischenspeicher - 1].density = saveScreen.density;
-                screen[zwischenspeicher - 1].HandyPosition = saveScreen.HandyPosition;
-                screen[zwischenspeicher - 1].HandyTask = 'j';
+                screen[saveScreen.HandyPosition - 1].width = saveScreen.width;
+                screen[saveScreen.HandyPosition - 1].height = saveScreen.height;
+                screen[saveScreen.HandyPosition - 1].density = saveScreen.density;
+                screen[saveScreen.HandyPosition - 1].HandyPosition = saveScreen.HandyPosition;
+                screen[saveScreen.HandyPosition - 1].HandyTask = 'j';
             }
             zwischenfloat = 9999;
             for(int i = 0; i < amountPlayers; i++){
@@ -112,11 +107,8 @@ public class GameView extends View  {
                 screen[i].offset = (screen[i].height - screen[i].adjustedHeight)/2;
             }
 
-            if(thisScreen.HandyPosition == 'l') zwischenspeicher = 1;
-            if(thisScreen.HandyPosition == 'r') zwischenspeicher = amountPlayers;
-            if(thisScreen.HandyPosition != 'l' && saveScreen.HandyPosition != 'r') zwischenspeicher = Character.getNumericValue(saveScreen.HandyPosition);
 
-            thisScreen.offset = screen[zwischenspeicher - 1].offset;
+            thisScreen.offset = screen[thisScreen.HandyPosition - 1].offset;
 
 
         }
@@ -132,7 +124,7 @@ public class GameView extends View  {
         paddle[1] = new Paddle();
         paddle[2] = new Paddle();
 
-        if(thisScreen.HandyPosition == 'l' && thisScreen.HandyTask == 'j'){
+        if(thisScreen.HandyPosition == 1 && thisScreen.HandyTask == 'j'){
             paddle[0].xdistance = 80 * thisScreen.density;
             paddle[0].length = 100 * thisScreen.density;
             paddle[0].width = 10 * thisScreen.density;
@@ -140,7 +132,7 @@ public class GameView extends View  {
             paddle[0].adjust = 50 * thisScreen.density;
         }
 
-        if(thisScreen.HandyPosition == 'r' && thisScreen.HandyTask == 'j'){
+        if(thisScreen.HandyPosition == amountPlayers && thisScreen.HandyTask == 'j'){
             paddle[0].xdistance = 80 * thisScreen.density;
             paddle[0].length = 100 * thisScreen.density;
             paddle[0].width = 10 * thisScreen.density;
@@ -161,10 +153,10 @@ public class GameView extends View  {
             paddle[2].adjust = 50 * thisScreen.density;
         }
 
-        if(thisScreen.HandyPosition == 'l') paddle[0].xpos = paddle[0].xdistance;
-        if(thisScreen.HandyPosition == 'r') paddle[0].xpos = thisScreen.width - paddle[0].xdistance;
-        if(thisScreen.HandyTask == 'h' /*&& thisScreen.HandyPosition != 'l'*/) paddle[1].xpos = paddle[1].xdistance;
-        if(thisScreen.HandyTask == 'h' /*&& thisScreen.HandyPosition != 'r'*/) paddle[2].xpos = screen[amountPlayers - 1].width - paddle[2].xdistance;
+        if(thisScreen.HandyPosition == 1) paddle[0].xpos = paddle[0].xdistance;
+        if(thisScreen.HandyPosition == amountPlayers) paddle[0].xpos = thisScreen.width - paddle[0].xdistance;
+        if(thisScreen.HandyTask == 'h' /*&& thisScreen.HandyPosition != 1*/) paddle[1].xpos = paddle[1].xdistance;
+        if(thisScreen.HandyTask == 'h' /*&& thisScreen.HandyPosition != amountPlayers*/) paddle[2].xpos = screen[amountPlayers - 1].width - paddle[2].xdistance;
 
 
         circle.CurrentHandy = 1;
@@ -180,6 +172,7 @@ public class GameView extends View  {
         float standardyspeed;
         float xspeed;
         float yspeed;
+        float standardradius;
         float radius;
         int CurrentHandy;
 
@@ -188,28 +181,56 @@ public class GameView extends View  {
             circle.ypos += circle.yspeed;
         }
 
-        public void getSpecificSpeeds(){
+        public void getSpecificValues(){
             circle.xspeed = circle.standardxspeed * screen[circle.CurrentHandy - 1].density;
             circle.yspeed = circle.standardyspeed * screen[circle.CurrentHandy - 1].density;
-
+            radius = standardradius * screen[CurrentHandy - 1].density;
         }
 
         public void checkHitbox() {
-            /*
-            if (circle.xpos > screen.width - circle.radius || circle.xpos < circle.radius)
-                circle.xspeed *= -1;*/
-            if (circle.ypos > screen[CurrentHandy - 1].height - circle.radius - screen[circle.CurrentHandy - 1].offset || circle.ypos < circle.radius + screen[circle.CurrentHandy - 1].offset) circle.standardyspeed *= -1;
-            if (screen[CurrentHandy - 1].HandyPosition == 'l'){
-                //--------------------------------------
-                if(circle.xpos >= screen[CurrentHandy - 1].width - circle.radius) circle.standardxspeed *= -1;
-                //--------------------------------------
-                if(circle.xpos - circle.radius <= paddle[1].xpos + paddle[1].width && circle.xpos - circle.radius >= paddle[1].xpos - paddle[1].width && circle.ypos >= paddle[1].ypos - paddle[1].length/2 && circle.ypos <= paddle[1].ypos + paddle[1].length/2 && standardxspeed < 0) circle.standardxspeed *= -1;
+           /*
+            if (xpos > screen.width - radius || xpos < radius)
+                xspeed *= -1;*/
+            if (ypos > screen[CurrentHandy - 1].height - radius - screen[CurrentHandy - 1].offset || ypos < radius + screen[CurrentHandy - 1].offset) standardyspeed *= -1;
+
+            if(xpos >= screen[CurrentHandy - 1].width && standardxspeed > 0 && CurrentHandy != amountPlayers) {
+                CurrentHandy++;
+                xpos = 0;
             }
-            if (screen[CurrentHandy - 1].HandyPosition == 'r'){
+
+            if(xpos >= screen[CurrentHandy - 1].width + circle.radius && standardxspeed > 0 && CurrentHandy == amountPlayers){
+                scoreLeft++;
+                xpos = 450;
+                ypos = 900;
+                standardxspeed = 6;
+                standardyspeed = 3;
+            }
+
+
+            if(xpos < 0 && standardxspeed < 0 && CurrentHandy != 1){
+                CurrentHandy--;
+                xpos = screen[CurrentHandy].width;
+            }
+
+            if(xpos < - circle.radius && standardxspeed < 0 && CurrentHandy == 1){
+                scoreRight++;
+                xpos = 450;
+                ypos = 900;
+                standardxspeed = 6;
+                standardyspeed = 3;
+            }
+
+            if (screen[CurrentHandy - 1].HandyPosition == 1){
                 //--------------------------------------
-                if(circle.xpos <= circle.radius) circle.standardxspeed *= -1;
+                if(xpos >= screen[CurrentHandy - 1].width - radius && standardxspeed > 0) standardxspeed *= -1;
                 //--------------------------------------
-                if(circle.xpos + circle.radius >= paddle[2].xpos - paddle[2].width && circle.xpos + circle.radius <= paddle[2].xpos + paddle[2].width && circle.ypos >= paddle[2].ypos - paddle[2].length && circle.ypos <= paddle[2].ypos + paddle[2].length && standardxspeed > 0) circle.standardxspeed *= -1;
+                if(xpos - radius <= paddle[1].xpos + paddle[1].width && xpos - radius >= paddle[1].xpos - paddle[1].width && ypos >= paddle[1].ypos - paddle[1].length/2 && ypos <= paddle[1].ypos + paddle[1].length/2 && standardxspeed < 0) standardxspeed *= -1;
+            }
+            if (screen[CurrentHandy - 1].HandyPosition == amountPlayers){
+                //--------------------------------------
+                if(xpos <= radius) standardxspeed *= -1;
+                //--------------------------------------
+                if(xpos + radius >= paddle[2].xpos - paddle[2].width && xpos + radius <= paddle[2].xpos + paddle[2].width && ypos >= paddle[2].ypos - paddle[2].length && ypos <= paddle[2].ypos + paddle[2].length && standardxspeed > 0) standardxspeed *= -1;
             }
         }
 
@@ -228,6 +249,11 @@ public class GameView extends View  {
             Log.i(TAG, "Es wird gesendet: "+msg);
             msgcript = MainActivity.cript.encript(msg); //Verschlüsselt ie nachricht
             MainActivity.sendReceive.write(msgcript.getBytes()); //senden
+
+
+            //Send CurrentHandy
+
+            //Send Radius
         }
 
         public void getPosX(float wert){
@@ -248,7 +274,7 @@ public class GameView extends View  {
         float density;
         float adjustedHeight;
         float offset;
-        char HandyPosition;
+        int HandyPosition;
         char HandyTask;
 
         public void getHandyPosition(){
@@ -265,8 +291,8 @@ public class GameView extends View  {
         }
 
         public void sendHandyPosition(){
-            if(thisScreen.HandyTask == 'h') thisScreen.HandyPosition = 'l';
-            if(thisScreen.HandyTask == 'j') thisScreen.HandyPosition = 'r';
+            if(thisScreen.HandyTask == 'h') thisScreen.HandyPosition = 1;
+            if(thisScreen.HandyTask == 'j') thisScreen.HandyPosition = amountPlayers;
         }
 
         public void sendHandyDimensions(){
@@ -274,7 +300,7 @@ public class GameView extends View  {
         }
 
         public void getOwnHandyPosition(){
-            HandyPosition = 'l';
+            HandyPosition = 1;
         }
 
         public void getOwnHandyDimensions(){
@@ -337,27 +363,24 @@ public class GameView extends View  {
         //if(thisScreen.HandyTask == 'h') circle.sendPos(); //bei send pos muss auch CurrentHandy mit geschickt werden
 
 
-        if(thisScreen.HandyPosition == 'l') zwischenspeicher = 1;
-        if(thisScreen.HandyPosition == 'r') zwischenspeicher = amountPlayers;
-        if(thisScreen.HandyPosition != 'l' && thisScreen.HandyPosition != 'r') zwischenspeicher = Character.getNumericValue(thisScreen.HandyPosition);
-
-        //if(zwischenspeicher == circle.CurrentHandy)canvas.drawCircle(circle.xpos, circle.ypos, circle.radius, paint);
+        //muss wieder eingefuegt werden:!!!!
+        //if(thisScreen.HandyPosition == circle.CurrentHandy)canvas.drawCircle(circle.xpos, circle.ypos, circle.radius, paint);
         //----------------------------------------
         canvas.drawCircle(circle.xpos, circle.ypos, circle.radius, paint);
         //----------------------------------------
-        if((thisScreen.HandyPosition == 'l' || thisScreen.HandyPosition == 'r') && thisScreen.HandyTask == 'j') canvas.drawRect(paddle[0].xpos - paddle[0].width/2, paddle[0].ypos - paddle[0].length/2,paddle[0].xpos + paddle[0].width/2, paddle[0].ypos + paddle[0].length/2, paint);
-        if(thisScreen.HandyPosition == 'l' && thisScreen.HandyTask == 'h') canvas.drawRect(paddle[1].xpos - paddle[1].width/2, paddle[1].ypos - paddle[1].length/2,paddle[1].xpos + paddle[1].width/2, paddle[1].ypos + paddle[1].length/2, paint);
-        if(thisScreen.HandyPosition == 'r' && thisScreen.HandyTask == 'h') canvas.drawRect(paddle[2].xpos - paddle[2].width/2, paddle[2].ypos - paddle[2].length/2,paddle[2].xpos + paddle[2].width/2, paddle[2].ypos + paddle[2].length/2, paint);
+        if((thisScreen.HandyPosition == 1 || thisScreen.HandyPosition == amountPlayers) && thisScreen.HandyTask == 'j') canvas.drawRect(paddle[0].xpos - paddle[0].width/2, paddle[0].ypos - paddle[0].length/2,paddle[0].xpos + paddle[0].width/2, paddle[0].ypos + paddle[0].length/2, paint);
+        if(thisScreen.HandyPosition == 1 && thisScreen.HandyTask == 'h') canvas.drawRect(paddle[1].xpos - paddle[1].width/2, paddle[1].ypos - paddle[1].length/2,paddle[1].xpos + paddle[1].width/2, paddle[1].ypos + paddle[1].length/2, paint);
+        if(thisScreen.HandyPosition == amountPlayers && thisScreen.HandyTask == 'h') canvas.drawRect(paddle[2].xpos - paddle[2].width/2, paddle[2].ypos - paddle[2].length/2,paddle[2].xpos + paddle[2].width/2, paddle[2].ypos + paddle[2].length/2, paint);
 
         if(thisScreen.HandyTask == 'h'){
-            if(thisScreen.HandyPosition != 'l') paddle[1].getLeftYPos();
-            if(thisScreen.HandyPosition != 'r') paddle[2].getRightYPos();
+            if(thisScreen.HandyPosition != 1) paddle[1].getLeftYPos();
+            if(thisScreen.HandyPosition != amountPlayers) paddle[2].getRightYPos();
             circle.checkHitbox();
-            circle.getSpecificSpeeds();
+            circle.getSpecificValues();
             circle.move();
         }
         else {
-            if(thisScreen.HandyPosition == 'l' || thisScreen.HandyPosition == 'r') paddle[0].sendYPos();
+            if(thisScreen.HandyPosition == 1 || thisScreen.HandyPosition == amountPlayers) paddle[0].sendYPos();
             //circle.CurrentHandy = 0;
         }
 
@@ -369,17 +392,17 @@ public class GameView extends View  {
     public boolean onTouchEvent(MotionEvent event){
         //circle.xpos = event.getX();
         //circle.ypos = event.getY();
-        if((thisScreen.HandyPosition == 'l' || thisScreen.HandyPosition == 'r') && thisScreen.HandyTask == 'j' && event.getY() < paddle[0].ypos + paddle[0].length/2 + paddle[0].adjust && event.getY() > paddle[0].ypos - paddle[0].length/2 - paddle[0].adjust) {
+        if((thisScreen.HandyPosition == 1 || thisScreen.HandyPosition == amountPlayers) && thisScreen.HandyTask == 'j' && event.getY() < paddle[0].ypos + paddle[0].length/2 + paddle[0].adjust && event.getY() > paddle[0].ypos - paddle[0].length/2 - paddle[0].adjust) {
             paddle[0].ypos = event.getY();
             if(paddle[0].ypos < thisScreen.offset + paddle[0].length/2) paddle[0].ypos = thisScreen.offset + paddle[0].length/2;
             if(paddle[0].ypos > thisScreen.height - thisScreen.offset - paddle[0].length/2) paddle[0].ypos = thisScreen.height - thisScreen.offset - paddle[0].length/2;
         }
-        if(thisScreen.HandyPosition == 'l' && thisScreen.HandyTask == 'h' && event.getY() < paddle[1].ypos + paddle[1].length/2 + paddle[1].adjust && event.getY() > paddle[1].ypos - paddle[1].length/2 - paddle[1].adjust) {
+        if(thisScreen.HandyPosition == 1 && thisScreen.HandyTask == 'h' && event.getY() < paddle[1].ypos + paddle[1].length/2 + paddle[1].adjust && event.getY() > paddle[1].ypos - paddle[1].length/2 - paddle[1].adjust) {
             paddle[1].ypos = event.getY();
             if(paddle[1].ypos < thisScreen.offset + paddle[1].length/2) paddle[1].ypos = thisScreen.offset + paddle[1].length/2;
             if(paddle[1].ypos > thisScreen.height - thisScreen.offset - paddle[1].length/2) paddle[1].ypos = thisScreen.height - thisScreen.offset - paddle[1].length/2;
         }
-        if(thisScreen.HandyPosition == 'r' && thisScreen.HandyTask == 'h' && event.getY() < paddle[2].ypos + paddle[2].length/2 + paddle[2].adjust && event.getY() > paddle[2].ypos - paddle[2].length/2 - paddle[2].adjust) {
+        if(thisScreen.HandyPosition == amountPlayers && thisScreen.HandyTask == 'h' && event.getY() < paddle[2].ypos + paddle[2].length/2 + paddle[2].adjust && event.getY() > paddle[2].ypos - paddle[2].length/2 - paddle[2].adjust) {
             paddle[2].ypos = event.getY();
             if(paddle[2].ypos < thisScreen.offset + paddle[2].length/2) paddle[2].ypos = thisScreen.offset + paddle[2].length/2;
             if(paddle[2].ypos > thisScreen.height - thisScreen.offset - paddle[2].length/2) paddle[2].ypos = thisScreen.height - thisScreen.offset - paddle[2].length/2;
