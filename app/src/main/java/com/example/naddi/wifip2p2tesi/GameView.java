@@ -5,21 +5,30 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.net.wifi.p2p.WifiP2pInfo;
+import android.widget.Toast;
+
+import com.example.naddi.wifip2p2tesi.MainActivity;
 
 
-public class GameView extends View {
+
+
+public class GameView extends View  {
 
     int amountPlayers;
     int zwischenspeicher;
     float zwischenfloat;
-    Circle circle;
+    public static Circle circle;
     Screen thisScreen;
     Screen[] screen;
     Screen saveScreen;
     Paddle[] paddle;
     Paint paint;
+    private static final String TAG ="DEBUGINGER";
+
 
     public GameView(Context context) {
         super(context);
@@ -30,11 +39,27 @@ public class GameView extends View {
         paint.setFilterBitmap(true);
 
         thisScreen = new Screen();
+        thisScreen.getOwnHandyTask();
         thisScreen.getOwnHandyDimensions();
         thisScreen.getOwnHandyPosition();
-        thisScreen.getOwnHandyTask();
-
+        Log.i(TAG, "Das Objekt Circle ist Erschinen");
         circle = new Circle();
+
+
+        circle.radius = 10 * thisScreen.density;
+
+
+
+
+        String msgcript = MainActivity.cript.encript("Letsegooo"); //Verschlüsselt ie nachricht
+        MainActivity.sendReceive.write(msgcript.getBytes()); //senden
+
+
+        if(thisScreen.HandyTask == 'h'){
+
+        }
+
+
 
         if(thisScreen.HandyTask == 'h'){
             thisScreen.getAmountPlayers();
@@ -45,7 +70,7 @@ public class GameView extends View {
             circle.ypos = 900;
             circle.standardxspeed = 6;
             circle.standardyspeed = 3;
-            circle.radius = 10 * thisScreen.density;
+            //circle.radius = 10 * thisScreen.density;
 
             if(thisScreen.HandyPosition == 'l') zwischenspeicher = 1;
             if(thisScreen.HandyPosition == 'r') zwischenspeicher = amountPlayers;
@@ -190,12 +215,32 @@ public class GameView extends View {
 
         public void sendPos(){
 
+            //Send X-Pos
+            String msg = "B_Xpos";
+            msg=msg+String.valueOf(xpos);
+            Log.i(TAG, "Es wird gesendet: "+msg);
+            String msgcript = MainActivity.cript.encript(msg); //Verschlüsselt ie nachricht
+            MainActivity.sendReceive.write(msgcript.getBytes()); //senden
+
+            //Send Y-Pos
+            msg = "B_Ypos";
+            msg=msg+String.valueOf(xpos);
+            Log.i(TAG, "Es wird gesendet: "+msg);
+            msgcript = MainActivity.cript.encript(msg); //Verschlüsselt ie nachricht
+            MainActivity.sendReceive.write(msgcript.getBytes()); //senden
         }
 
-        public void getPos(){
+        public void getPosX(float wert){
+            circle.xpos = wert;
+            Log.i(TAG, "Es wurde empfangen: "+String.valueOf(wert));
+        }
 
+        public void getPosY(float wert){
+            circle.ypos = wert;
+            Log.i(TAG, "Es wurde empfangen: "+String.valueOf(wert));
         }
     }
+
 
     class Screen {
         float width;
@@ -220,7 +265,8 @@ public class GameView extends View {
         }
 
         public void sendHandyPosition(){
-
+            if(thisScreen.HandyTask == 'h') thisScreen.HandyPosition = 'l';
+            if(thisScreen.HandyTask == 'j') thisScreen.HandyPosition = 'r';
         }
 
         public void sendHandyDimensions(){
@@ -248,7 +294,8 @@ public class GameView extends View {
         }
 
         public void getOwnHandyTask(){
-            HandyTask = 'h';
+            if(MainActivity.IsHost) HandyTask = 'h';
+            else HandyTask = 'j';
         }
 
         public void getAmountPlayers(){
@@ -287,14 +334,17 @@ public class GameView extends View {
         canvas.drawRect(0, 0, thisScreen.width, thisScreen.offset, paint);
         canvas.drawRect(0, thisScreen.height - thisScreen.offset, thisScreen.width, thisScreen.height, paint);
 
-        if(thisScreen.HandyTask == 'h') circle.sendPos(); //bei send pos muss auch CurrentHandy mit geschickt werden
-        else circle.getPos();
+        //if(thisScreen.HandyTask == 'h') circle.sendPos(); //bei send pos muss auch CurrentHandy mit geschickt werden
+
 
         if(thisScreen.HandyPosition == 'l') zwischenspeicher = 1;
         if(thisScreen.HandyPosition == 'r') zwischenspeicher = amountPlayers;
         if(thisScreen.HandyPosition != 'l' && thisScreen.HandyPosition != 'r') zwischenspeicher = Character.getNumericValue(thisScreen.HandyPosition);
 
-        if(zwischenspeicher == circle.CurrentHandy)canvas.drawCircle(circle.xpos, circle.ypos, circle.radius, paint);
+        //if(zwischenspeicher == circle.CurrentHandy)canvas.drawCircle(circle.xpos, circle.ypos, circle.radius, paint);
+        //----------------------------------------
+        canvas.drawCircle(circle.xpos, circle.ypos, circle.radius, paint);
+        //----------------------------------------
         if((thisScreen.HandyPosition == 'l' || thisScreen.HandyPosition == 'r') && thisScreen.HandyTask == 'j') canvas.drawRect(paddle[0].xpos - paddle[0].width/2, paddle[0].ypos - paddle[0].length/2,paddle[0].xpos + paddle[0].width/2, paddle[0].ypos + paddle[0].length/2, paint);
         if(thisScreen.HandyPosition == 'l' && thisScreen.HandyTask == 'h') canvas.drawRect(paddle[1].xpos - paddle[1].width/2, paddle[1].ypos - paddle[1].length/2,paddle[1].xpos + paddle[1].width/2, paddle[1].ypos + paddle[1].length/2, paint);
         if(thisScreen.HandyPosition == 'r' && thisScreen.HandyTask == 'h') canvas.drawRect(paddle[2].xpos - paddle[2].width/2, paddle[2].ypos - paddle[2].length/2,paddle[2].xpos + paddle[2].width/2, paddle[2].ypos + paddle[2].length/2, paint);
@@ -308,7 +358,7 @@ public class GameView extends View {
         }
         else {
             if(thisScreen.HandyPosition == 'l' || thisScreen.HandyPosition == 'r') paddle[0].sendYPos();
-            circle.CurrentHandy = 0;
+            //circle.CurrentHandy = 0;
         }
 
 

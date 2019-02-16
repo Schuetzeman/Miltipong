@@ -24,6 +24,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -55,10 +56,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
+
 public class MainActivity extends AppCompatActivity {
     int backView = R.layout.activity_main;
     Database myDb;
-    Button btnOnOff, btnDiscover, btnSend,btnCripto, btnConver, buttonplay;
+    Button btnOnOff, btnDiscover, btnSend,btnCripto, btnConver, buttonplay, btnply;
     ListView  listView, conversList;
     TextView read_msg_box, connectionsStatus;
     EditText writeMsg;
@@ -69,27 +72,23 @@ public class MainActivity extends AppCompatActivity {
     IntentFilter mIntentFilter;
     List<WifiP2pDevice> peers= new ArrayList<WifiP2pDevice>();
     String[] deviceNameArray;
-
     WifiP2pDevice[] deviceArray;
     static  final int MESSAGE_READ =1;
-
-
-
     ServerClass serverClass;
     ClientClass clientClass;
-    SendReceive sendReceive;
-
-
+    public static SendReceive sendReceive;
     Button btnChatConnect;
     ListView chatMex;
     EditText mexText;
     ListView chatList;
-
-    Cript cript;
-
-
+    public static Cript cript;
     String currentMacConnect;
     String currentNameConnect;
+    private static final String TAG ="DEBUGINGER";
+    public static boolean IsHost;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,11 +123,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean handleMessage(Message msg) {
             switch (msg.what){
+                //Austauschen der 2. Nachricht
                 case MESSAGE_READ:
                     byte[] readBuff = (byte[]) msg.obj;
-                    String tempMsg = new String (readBuff,0,msg.arg1);
+                    String tempMsg = new String (readBuff,0,msg.arg1);//Hier wird string empfangen
                     WifiP2pConfig config = new WifiP2pConfig();
-                    if(tempMsg.length()>16 &&tempMsg.substring(0,4).equals("MAC:") ){
+
+
+
+                    if(tempMsg.length()>16 &&tempMsg.substring(0,4).equals("MAC:") ){ //aufteilen in Adresse + nachricht
                         currentMacConnect = tempMsg.substring(4,21);
                         currentNameConnect = tempMsg.substring(7,tempMsg.lastIndexOf(">")-1);
                         try {
@@ -139,22 +142,64 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
 
-                        System.out.println(currentMacConnect);
+                        System.out.println(currentMacConnect); //zuordnen eines empfangsfeldes
                         setContentView(R.layout.chat);
                         chatWork();
                         try{
                             updateChatMex();
                         }catch (Exception e){}
+                        //Temporär
+
+
 
                     }else{
-                        String mex =cript.decript(tempMsg);
+
+                        //Empfangen
+                        String mex =cript.decript(tempMsg);//entschlüsseln
+                        Log.i(TAG, "Diese Daten wurden empfangen "+mex);
+                        //Toast.makeText(getApplicationContext(),mex,Toast.LENGTH_SHORT).show(); //anzeige befel empfang
+                        if(mex.equals("All_start")) {
+                            Log.i(TAG, "All start angekommen");
+                            Toast.makeText(getApplicationContext(), "mir san da", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, GameActivity.class);
+                            startActivity(intent);
+                        }else if(mex.equals("errore")){
+
+                        }else if(mex.equals("Letsegooo")){
+
+
+                        }else{
+                            String temp;
+                            temp=mex.substring(0,6);
+                            Log.i(TAG, "Substring "+temp);
+                            if(temp.equals("B_Xpos")){
+                                Log.i(TAG, "Dies ist die nachricht s nach dem filter X "+mex);
+                                mex=mex.substring(7,mex.length());
+                                float wert=Float.parseFloat(mex);
+                                Log.i(TAG, "Dies ist die nachricht s nach dem filter X in float "+String.valueOf(wert));
+                                //GameView.circle.getPosX(wert);
+                                GameView.circle.xpos = wert;
+                            }
+                            if(mex.substring(0,6).equals("B_Ypos")){
+                                Log.i(TAG, "Dies ist die nachricht s nach dem filter Y"+mex);
+                                mex=mex.substring(7,mex.length());
+                                float wert=Float.parseFloat(mex);
+                                Log.i(TAG, "Dies ist die nachricht s nach dem filter Y in float"+String.valueOf(wert));
+                                GameView.circle.ypos = wert;
+                                //GameView.circle.getPosY(wert);
+                            }
+                        }
+
+
+
+
                         myDb.insertMessage(currentMacConnect,mex);
-                        updateChatMex();
-                        Toast.makeText(getApplicationContext(),tempMsg,Toast.LENGTH_SHORT).show();
+                        //updateChatMex();//Das können wir quasi raus nehmen, ist nur darstellung
+                        //Toast.makeText(getApplicationContext(),tempMsg,Toast.LENGTH_SHORT).show(); //anzeige befel empfang
 
                     }
 
-                    Toast.makeText(getApplicationContext(),tempMsg,Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(),tempMsg,Toast.LENGTH_SHORT).show();
                    // myDb.insertMessage();
                     break;
             }
@@ -201,13 +246,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         //-----------------------------START CONNECTION----------------------------------------------------
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 final WifiP2pDevice device = deviceArray[i];
                 WifiP2pConfig config = new WifiP2pConfig();
+                //hier einstellen ob host oder nicht
+
+
                 config.deviceAddress = device.deviceAddress;
+
+
+
 
                 mManager.connect(mChanel,config,new WifiP2pManager.ActionListener() {
                     @Override
@@ -270,11 +322,14 @@ public class MainActivity extends AppCompatActivity {
                         }
                         setContentView(R.layout.chat);
                         System.out.println(currentMacConnect);
+
                         chatWork();
                         updateChatMex();
 
                     }
                 });
+
+
 
                 Cursor peers = myDb.getPeers();
                 String[] list = new String[peers.getCount()];
@@ -306,8 +361,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     private void initialWork() {
         btnConver = findViewById(R.id.conversazioni);
         btnCripto = findViewById(R.id.cripto);
@@ -316,6 +369,8 @@ public class MainActivity extends AppCompatActivity {
      //   btnSend = findViewById(R.id.sendButton);
         buttonplay = findViewById(R.id.playButton);
         listView =  findViewById(R.id.peerListView);
+
+
 
      //   read_msg_box =  findViewById(R.id.readMsg);
         connectionsStatus= findViewById(R.id.connectionStatus);
@@ -333,14 +388,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     private void chatWork(){
         btnChatConnect = findViewById(R.id.reconnectionButton);
         chatMex = findViewById(R.id.chatList);
         mexText = findViewById(R.id.mexText);
         btnSend = findViewById(R.id.sendChat);
         chatList = findViewById(R.id.chatList);
+        btnply=findViewById(R.id.Ply);
 
         btnSend.setOnClickListener(new OnClickListener() {
             @Override
@@ -349,9 +403,9 @@ public class MainActivity extends AppCompatActivity {
                 // Toast.makeText(getApplicationContext(),msg.getBytes().toString(),Toast.LENGTH_SHORT).show();
                 try{
 
-
-                    String msgcript = cript.encript(msg);
-                    sendReceive.write(msgcript.getBytes());
+//SENDE BEFEL... HIER...JA GENAU HIER
+                    String msgcript = cript.encript(msg); //Verschlüsselt ie nachricht
+                    sendReceive.write(msgcript.getBytes()); //senden
                     mexText.setText("");
                     myDb.insertMessage(currentMacConnect,"me: "+msg);
                     updateChatMex();
@@ -361,16 +415,27 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnply.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+
+
+
+
+
+
+                String msg="All_start";
+                String msgcript = cript.encript(msg); //Verschlüsselt ie nachricht
+               sendReceive.write(msgcript.getBytes()); //senden
+
+                Intent intent = new Intent(MainActivity.this,GameActivity.class);
+                startActivity(intent);
+
+            }
+        });
         }
-
-
-
-
-
-
-
-
-
 
 
     WifiP2pManager.PeerListListener peerListListener= new WifiP2pManager.PeerListListener() {
@@ -420,7 +485,7 @@ public class MainActivity extends AppCompatActivity {
             final InetAddress groupOwnwerAndres =wifiP2pInfo.groupOwnerAddress;
 
             if(wifiP2pInfo.groupFormed && wifiP2pInfo.isGroupOwner){
-
+                IsHost=true;
                 connectionsStatus.setText("host");
                 //sendReceive = new SendReceive(MESSAGE_READ,handler);
                 serverClass=new ServerClass(sendReceive);
@@ -431,6 +496,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             }else if (wifiP2pInfo.groupFormed){
+                IsHost=false;
                // sendReceive = new SendReceive(MESSAGE_READ,handler);
 
                 connectionsStatus.setText("client");
@@ -534,6 +600,12 @@ public class MainActivity extends AppCompatActivity {
             onRequestPermissionsResult(REQUEST_CODE_ASK_PERMISSIONS, REQUIRED_SDK_PERMISSIONS,
                     grantResults);
         }
+    }
+
+    public void sendingereinger(){
+        String msg="hallo";
+        String msgcript = cript.encript(msg); //Verschlüsselt ie nachricht
+        sendReceive.write(msgcript.getBytes()); //senden
     }
 
     @Override

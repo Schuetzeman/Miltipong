@@ -1,6 +1,7 @@
 package com.example.naddi.wifip2p2tesi;
 
 import android.os.Handler;
+import android.util.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,6 +15,7 @@ public class SendReceive extends Thread{
     static int MESSAGE_READ =1;
     public Handler handler;
 
+    private static final String TAG ="DEBUGINGER";
 
     public SendReceive(int MESSAGE_READ,Handler handler){
         this.handler = handler;
@@ -53,6 +55,7 @@ public class SendReceive extends Thread{
     }
 
     public void write(final byte[] bytes) {
+        Log.i(TAG, "write:");
         new Thread(new Runnable(){
             @Override
             public void run() {

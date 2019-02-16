@@ -64,12 +64,12 @@
         "source": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_menu_item_layout.xml.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -112,12 +112,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_edit_text_material.xml.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_edit_text_material.xml.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -132,12 +132,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_toolbar.xml.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_bottom_navigation_item_background.xml.flat",
@@ -176,12 +176,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-ldrtl-xxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-ldrtl-xxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
@@ -256,12 +256,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -292,12 +292,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -324,12 +324,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\dba997dc6fbefecf1245354547118cd1\\res\\color\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_disable_only_material_light.xml.flat",
@@ -380,12 +380,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
@@ -524,12 +524,12 @@
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\color\\abc_search_url_text.xml"
     },
     {
-        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",

@@ -337,38 +337,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-vi_values-vi.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\values-vi\\values-vi.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1958",
-                        "endColumns": "100",
-                        "endOffsets": "2054"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\values-vi\\values-vi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,219,327,436,520,623,742,819,896,980,1084,1193,1294,1399,1513,1618,1775,1874",
-                        "endColumns": "113,107,108,83,102,118,76,76,83,103,108,100,104,113,104,156,98,83",
-                        "endOffsets": "214,322,431,515,618,737,814,891,975,1079,1188,1289,1394,1508,1613,1770,1869,1953"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-mk_values-mk.arsc.flat",
             "map": [
                 {
@@ -396,6 +364,38 @@
                         "startOffsets": "1961",
                         "endColumns": "100",
                         "endOffsets": "2057"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-vi_values-vi.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\values-vi\\values-vi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1958",
+                        "endColumns": "100",
+                        "endOffsets": "2054"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\values-vi\\values-vi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,327,436,520,623,742,819,896,980,1084,1193,1294,1399,1513,1618,1775,1874",
+                        "endColumns": "113,107,108,83,102,118,76,76,83,103,108,100,104,113,104,156,98,83",
+                        "endOffsets": "214,322,431,515,618,737,814,891,975,1079,1188,1289,1394,1508,1613,1770,1869,1953"
                     }
                 }
             ]
@@ -641,38 +641,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-am_values-am.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\values-am\\values-am.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,207,306,412,498,601,714,792,870,949,1049,1149,1245,1348,1447,1554,1707,1803",
-                        "endColumns": "101,98,105,85,102,112,77,77,78,99,99,95,102,98,106,152,95,78",
-                        "endOffsets": "202,301,407,493,596,709,787,865,944,1044,1144,1240,1343,1442,1549,1702,1798,1877"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\values-am\\values-am.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1882",
-                        "endColumns": "100",
-                        "endOffsets": "1978"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-pt-rPT_values-pt-rPT.arsc.flat",
             "map": [
                 {
@@ -700,6 +668,38 @@
                         "startOffsets": "105,225,331,438,527,628,752,836,917,1004,1111,1223,1325,1433,1540,1647,1818,1917",
                         "endColumns": "119,105,106,88,100,123,83,80,86,106,111,101,107,106,106,170,98,84",
                         "endOffsets": "220,326,433,522,623,747,831,912,999,1106,1218,1320,1428,1535,1642,1813,1912,1997"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-am_values-am.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\values-am\\values-am.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,207,306,412,498,601,714,792,870,949,1049,1149,1245,1348,1447,1554,1707,1803",
+                        "endColumns": "101,98,105,85,102,112,77,77,78,99,99,95,102,98,106,152,95,78",
+                        "endOffsets": "202,301,407,493,596,709,787,865,944,1044,1144,1240,1343,1442,1549,1702,1798,1877"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\values-am\\values-am.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1882",
+                        "endColumns": "100",
+                        "endOffsets": "1978"
                     }
                 }
             ]
@@ -1345,38 +1345,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-hy_values-hy.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\values-hy\\values-hy.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1945",
-                        "endColumns": "100",
-                        "endOffsets": "2041"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\values-hy\\values-hy.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,208,309,419,508,614,729,811,892,977,1084,1191,1290,1400,1507,1607,1764,1863",
-                        "endColumns": "102,100,109,88,105,114,81,80,84,106,106,98,109,106,99,156,98,81",
-                        "endOffsets": "203,304,414,503,609,724,806,887,972,1079,1186,1285,1395,1502,1602,1759,1858,1940"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-iw_values-iw.arsc.flat",
             "map": [
                 {
@@ -1404,6 +1372,38 @@
                         "startOffsets": "1888",
                         "endColumns": "102",
                         "endOffsets": "1986"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\leoau\\Downloads\\001 Code\\-messaging-app-using-Wi-Fi-Direct-master\\-messaging-app-using-Wi-Fi-Direct-master\\WifiP2p2Tesi\\app\\build\\intermediates\\res\\merged\\debug\\values-hy_values-hy.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\8c33cefa0c2ec9e523fba17a14d5283f\\res\\values-hy\\values-hy.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1945",
+                        "endColumns": "100",
+                        "endOffsets": "2041"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\leoau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e1272f34bb68ae42a495e8d7171aab66\\res\\values-hy\\values-hy.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,309,419,508,614,729,811,892,977,1084,1191,1290,1400,1507,1607,1764,1863",
+                        "endColumns": "102,100,109,88,105,114,81,80,84,106,106,98,109,106,99,156,98,81",
+                        "endOffsets": "203,304,414,503,609,724,806,887,972,1079,1186,1285,1395,1502,1602,1759,1858,1940"
                     }
                 }
             ]
